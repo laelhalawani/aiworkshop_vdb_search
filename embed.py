@@ -20,9 +20,9 @@ def encode_image(image):
         # Normally batches of images are used, that's why we need to extract the first item.
         image_embeddings = image_features[0]
         # Convert the tensor of embeddings to a Python list for easier handling.
-        image_embeddings: list = list(image_embeddings.numpy())
+        image_embeddings: list = list(image_embeddings.numpy().astype(float))
         # Print a success message with the type of the image_embeddings variable.
-        print(f"Successfully encoded and converted {type(image_embeddings)}")
+        print(f"Created embeddings for image, type {type(image_embeddings)}")
     # Return the list of image embeddings.
     return image_embeddings
 
