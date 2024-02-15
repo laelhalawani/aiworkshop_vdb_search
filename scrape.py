@@ -30,11 +30,12 @@ def slow_scroll(page, scroll_step=100, timeout=100):
         last_position = new_position
 
 with sync_playwright() as playwright:
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     page = browser.new_page()
     for cat, cat_url in urls.items():
         # Navigate to the category URL
-        page.goto(cat_url, wait_until='networkidle')
+        #page.goto(cat_url, wait_until='networkidle') # <-- does not work in codespace?
+        page.goto(cat_url)
         # Scroll down the page to load all products
         slow_scroll(page, 50, 50)
         # Makesure the selector is loaded
