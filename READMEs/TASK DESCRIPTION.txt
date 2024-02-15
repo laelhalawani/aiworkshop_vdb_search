@@ -1,4 +1,4 @@
-1. Run scape.py -> this will create a file called products.json with all the products and following structure:
+1. Run scrape.py -> this will create a file called products.json with all the products and following structure:
 ```
     {
         "pid": "PM-4905041",
@@ -19,7 +19,10 @@ and inside there will be a directory for each 'product id' (PM or PIA). Each of 
     "category": "helmets",
     "image": "products\\GBBEANIE\\0.png",
     "pid": "GBBEANIE",
-    "url": "https://www.24mx.ie/product/24mx-sweat-beanie_pid-GBBEANIE"
+    "url": "https://www.24mx.ie/product/24mx-sweat-beanie_pid-GBBEANIE",
 }
 ```
-3. Run vdb_add_products.py -> this will add the products to the database, it will use the image embeddings to encode the image and save it with metadata equal to product data.json
+- 0.png -> the image of the product
+
+3. Create logic for adding products to the vectordb with product data as metadata
+4. Create search engine logics
