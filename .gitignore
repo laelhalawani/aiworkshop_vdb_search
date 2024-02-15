@@ -2,3 +2,4 @@
 /vector_db/
 scrape.json
 /completed/
+/__pycache__/
