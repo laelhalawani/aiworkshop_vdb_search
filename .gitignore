@@ -1,5 +1,5 @@
-/products/
-/vector_db/
-scrape.json
-/completed/
-/__pycache__/
+/src/products
+/src/vector_db
+/src/scrape.json
+__pycache__
+/venv
